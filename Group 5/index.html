@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippine Hub</title>
+    <link rel="icon" type="image/x-icon" href="flag123.png">
+    <style>
+          body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            background-color: #f4e9d8;
+            height: 100vh;
+            color: #333;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 100vh;
+            background-color: #b48e2f;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 5px solid #f0e3d0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #f0e3d0;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            margin: 0;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 19px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #d2a25a;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        #vintage-clock {
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+            font-size: 18px;
+            background-color: #b48e2f;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #f0e3d0;
+            margin-top: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #vintage-clock:hover {
+            background-color: #d2a25a;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+            margin-left: 180px;
+            padding: 20px;
+            background-color: #f4e9d8;
+        }
+
+        .section {
+            margin-bottom: 100px;
+            padding: 40px;
+            border-radius: 15px;
+            background-color: #faf0e6;
+            border: 3px solid #b48e2f;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .presidents {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            justify-content: center;
+            background-color: #faf0e6;
+
+        }
+
+        .president-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .president {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+            background-color: #d2a25a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        .president img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .president:hover img {
+            transform: scale(1.15);
+        }
+
+        .president:hover {
+            transform: scale(1.1);
+            border-color: #d2a25a;
+            box-shadow: #d2a25a 5px 5px;
+            z-index: 5;
+        }
+
+        .name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            border-top: 2px solid #b48e2f;
+            font-weight: 700;
+        }
+
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            background-color: #faf0e6;
+
+        }
+
+        .img-container img {
+            border: 5px solid #b48e2f;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            background-color: #f0e3d0;
+            max-width: 100%;
+            height: auto;
+        }
+
+        
+        .about-us, .contact-us {
+            background-color: #faf0e6;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border: 2px solid #d2a25a;
+        }
+
+        .about-us p, .contact-us p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        h1:hover {
+    color: #d2a25a;
+    text-shadow: 
+        0 0 10px blue,
+        0 0 20px yellow,
+        0 0 30px yellow,
+        0 0 40px red;
+}
+footer {
+            background-color: #b48e2f;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 6;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="flag123.png" alt="Philippines Logo">
+        <h1>Presidents Hub</h1>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+        <div id="vintage-clock"></div>
+    </div>
+
+    <div class="content">
+        <div id="home" class="section">
+            <h1 style="font-size: 2.5em; margin-bottom: 20px; text-align: center; color: #333;">Presidents of the Philippines</h1>
+            <div class="img-container">
+                <img src="download.png" alt="Main Image">
+            </div>
+            <div class="presidents">
+                <a href="president1.html" class="president-link">
+                    <div class="president">
+                        <img src="presdex1.jpg" alt="President 1">
+                        <div class="name">1988-1944</div>
+                    </div>
+                </a>
+                <a href="president2.html" class="president-link">
+                    <div class="president">
+                        <img src="presdex2.jpg" alt="President 2">
+                        <div class="name">1943-1946</div>
+                    </div>
+                </a>
+                <a href="president3.html" class="president-link">
+                    <div class="president">
+                        <img src="presdex 3.jpg" alt="President 3">
+                        <div class="name">1948-1957</div>
+                    </div>
+                </a>
+                <a href="president4.html" class="president-link">
+                    <div class="president">
+                        <img src="presdex4.jpg" alt="President 4">
+                        <div class="name">1957-1965</div>
+                    </div>
+                </a>
+                <a href="president5.html" class="president-link">
+                    <div class="president">
+                        <img src="presdex5.jpg" alt="President 5">
+                        <div class="name">1965-1992</div>
+                    </div>
+                </a>
+                <a href="president6.html" class="president-link">
+                    <div class="president">
+                        <img src="presdex6.jpg" alt="President 6">
+                        <div class="name">1992-2001</div>
+                    </div>
+                </a>
+                <a href="president7.html" class="president-link">
+                    <div class="president">
+                        <img src="presdex7.jpg" alt="President 7">
+                        <div class="name">2001-2010</div>
+                    </div>
+                </a>
+                <a href="president8.html" class="president-link">
+                    <div class="president">
+                        <img src="presdex8.jpg" alt="President 8">
+                        <div class="name">2010-2022</div>
+                    </div>
+                </a>
+                <a href="president9.html" class="president-link">
+                    <div class="president">
+                        <img src="presdex9.jpg" alt="President 9">
+                        <div class="name">2022-Now</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="about" class="section about-us">
+            <h1>About Us</h1>
+            <p>Welcome to the Presidents Hub. This website is dedicated to providing information about the Presidents of the Philippines, from their lives, leadership, and their impact on the nation's history.</p>
+            <p>Our goal is to preserve the rich history and achievements of the country's leaders and offer a platform where history can be explored with depth and detail. Whether you're a student, a researcher, or just someone passionate about Philippine history, this site is for you.</p>
+        </div>
+
+        <div id="contact" class="section contact-us">
+            <h1>Contact Us</h1>
+            <p>If you have any questions, suggestions, or feedback, feel free to get in touch:</p>
+            <p class="d-flex">
+                <strong class="me-2">Email:</strong>
+
+                <a href="mailto:duayjercik@gmail.com" class="site-footer-link">
+                    duayjerick@gmail.com
+                </a>
+            </p>
+            <p class="d-flex mb-1">
+                <strong class="me-2">Phone:</strong>
+                <a href="Tel:09192750629" class="site-footer-link">
+                    09192750629
+                </a>
+            </p>
+        </div>
+    </div>
+    <footer>
+        &copy; Group 5 Web System 101
+    </footer>
+    <script>
+        function updateClock() {
+    const now = new Date();
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const day = days[now.getDay()];
+    const date = now.getDate().toString().padStart(2, '0');
+    const month = (now.getMonth() + 1).toString().padStart(2, '0');
+    const year = now.getFullYear();
+    let hours = now.getHours();
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; 
+
+    const timeString = `${day} ${month}/${date}/${year} ${hours}:${minutes}:${seconds} ${ampm}`;
+    document.getElementById('vintage-clock').innerHTML = timeString;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+    </script>
+</body>
+</html>
+

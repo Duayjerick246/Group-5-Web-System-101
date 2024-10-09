@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippine Hub</title>
+    <link rel="icon" type="image/x-icon" href="flag123.png">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            background-color: #f4e9d8; 
+            color: #333;
+        }
+        
+        header {
+            background-color: #b48e2f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            border-bottom: 5px solid #d2a25a;
+            position: relative; 
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #c37f55;
+            padding: 10px 15px;
+            border: 3px solid #d2a25a;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 10;
+        }
+
+        .back-button:hover {
+            background-color: #d2a25a;
+            transform: scale(1.05);
+            color: #000;
+        }
+
+        #vintage-clock {
+            position: absolute;
+            top: 5px;
+            right: 20px; 
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+            background-color: #b48e2f;
+            padding: 5px; 
+            border-radius: 10px;
+            border: 2px solid #f0e3d0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            z-index: 10; 
+        }
+
+        #vintage-clock div {
+            margin: 0; 
+            font-size: 0.5em; 
+        }
+
+        #vintage-clock:hover {
+            background-color: #d2a25a; 
+            color: #000; 
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05); 
+        }
+
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .president-card {
+            background-color: #faf0e6;
+            border: 5px solid #b48e2f;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .president-card img {
+            width: 40%;
+            height: auto;
+            margin-bottom: 10px;
+            border: 5px solid #b48e2f;
+            border-radius: 10px;
+        }
+
+        .president-card h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .president-card p {
+            font-size: 1.2em;
+        }
+
+        footer {
+            background-color: #b48e2f;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        h2:hover {
+            color: #d2a25a;
+            text-shadow: 
+                0 0 10px blue,
+                0 0 20px yellow,
+                0 0 30px yellow,
+                0 0 40px red;
+        }
+
+        .highlights {
+            font-weight: bold;
+            color: #b48e2f;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header id="pres">
+        Presidents of the Philippines 2010-2022
+        <div id="vintage-clock">
+            <div id="clock-day"></div>
+            <div id="clock-date"></div>
+            <div id="clock-time"></div>
+        </div>
+    </header>
+    <a href="index.html" class="back-button">Back to Home</a>
+
+    <div class="container">
+        <div class="president-card">
+            <img src="pres15.jpg" alt="Benigno Aquino III">
+            <h2>Benigno Aquino III</h2>
+            <p><strong>Background:</strong> Born on February 8, 1960, in Manila, Aquino was the son of former President Corazon Aquino.</p>
+            <p><strong>Biography:</strong> He served as president from 2010 to 2016, focusing on anti-corruption and good governance.</p>
+            <p><strong>Contributions:</strong>
+                <ul>
+                    <li>Philippine Economic Growth: His administration saw significant economic growth and improvements in investor confidence.</li>
+                    <li>Good Governance: Promoted transparency and accountability in government through various reforms.</li>
+                    <li>Social Programs: Expanded access to education and healthcare, benefiting millions of Filipinos.</li>
+                </ul>
+            </p>
+            <p class="highlights">Highlights: Anti-Corruption Advocate, Economic Reformer, Advocate for Good Governance</p>
+        </div>
+        <div class="president-card">
+            <img src="pres16.jpg" alt="Rodrigo Duterte">
+            <h2>Rodrigo Duterte</h2>
+            <p><strong>Background:</strong> Born on March 28, 1945, in Maasin, Southern Leyte, Duterte served as the mayor of Davao City for over two decades.</p>
+            <p><strong>Biography:</strong> Serving from 2016 to 2022, Duterte's administration focused on crime reduction and infrastructure development.</p>
+            <p><strong>Contributions:</strong>
+                <ul>
+                    <li>War on Drugs: Launched a controversial anti-drug campaign aimed at reducing crime rates.</li>
+                    <li>Build, Build, Build Program: Initiated massive infrastructure projects to improve transportation and connectivity.</li>
+                    <li>Foreign Policy Shift: Realigned the Philippines' foreign policy, fostering closer ties with China.</li>
+                </ul>
+            </p>
+            <p class="highlights">Highlights: Crime Reduction Focus, Infrastructure Development, Controversial Policies</p>
+        </div>
+    </div>
+    <footer>
+        &copy; Group 5 Web System 101
+    </footer>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const day = days[now.getDay()];
+            const date = now.getDate().toString().padStart(2, '0');
+            const month = (now.getMonth() + 1).toString().padStart(2, '0');
+            const year = now.getFullYear();
+            let hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; 
+
+            document.getElementById('clock-day').innerHTML = day;
+            document.getElementById('clock-date').innerHTML = `${month}/${date}/${year}`;
+            document.getElementById('clock-time').innerHTML = `${hours}:${minutes}:${seconds} ${ampm}`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>

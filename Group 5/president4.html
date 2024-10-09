@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippine Hub</title>
+    <link rel="icon" type="image/x-icon" href="flag123.png">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            background-color: #f4e9d8; 
+            color: #333;
+        }
+        
+        header {
+            background-color: #b48e2f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            border-bottom: 5px solid #d2a25a;
+            position: relative; 
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #c37f55;
+            padding: 10px 15px;
+            border: 3px solid #d2a25a;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 10;
+        }
+
+        .back-button:hover {
+            background-color: #d2a25a;
+            transform: scale(1.05);
+            color: #000;
+        }
+
+        #vintage-clock {
+            position: absolute;
+            top: 5px;
+            right: 20px; 
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+            background-color: #b48e2f;
+            padding: 5px; 
+            border-radius: 10px;
+            border: 2px solid #f0e3d0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            z-index: 10; 
+        }
+
+        #vintage-clock div {
+            margin: 0; 
+            font-size: 0.5em; 
+        }
+
+        #vintage-clock:hover {
+            background-color: #d2a25a; 
+            color: #000; 
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05); 
+        }
+
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .president-card {
+            background-color: #faf0e6;
+            border: 5px solid #b48e2f;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .president-card img {
+            width: 40%;
+            height: auto;
+            margin-bottom: 10px;
+            border: 5px solid #b48e2f;
+            border-radius: 10px;
+        }
+
+        .president-card h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .president-card p {
+            font-size: 1.2em;
+        }
+
+        footer {
+            background-color: #b48e2f;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        h2:hover {
+            color: #d2a25a;
+            text-shadow: 
+                0 0 10px blue,
+                0 0 20px yellow,
+                0 0 30px yellow,
+                0 0 40px red;
+        }
+
+        .highlights {
+            font-weight: bold;
+            color: #b48e2f;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header id="pres">
+        Presidents of the Philippines 1957-1965
+        <div id="vintage-clock">
+            <div id="clock-day"></div>
+            <div id="clock-date"></div>
+            <div id="clock-time"></div>
+        </div>
+    </header>
+    <a href="index.html" class="back-button">Back to Home</a>
+
+    <div class="container">
+        <div class="president-card">
+            <img src="pres7.jpg" alt="Ramon Magsaysay">
+            <h2>Ramon Magsaysay</h2>
+            <p><strong>Background:</strong> Ramon Magsaysay was born on August 31, 1907, in Iba, Zambales. He served as a soldier during World War II and later became a prominent politician.</p>
+            <p><strong>Biography:</strong> Magsaysay served as the seventh President of the Philippines from 1953 until his death in 1957. He was known for his strong leadership style and commitment to social justice.</p>
+            <p><strong>Contributions:</strong>
+                <ul>
+                    <li>Social Justice: Advocated for the rights and welfare of the underprivileged.</li>
+                    <li>Economic Development: Implemented policies to improve the economy and reduce poverty.</li>
+                    <li>National Security: Strengthened the military and addressed insurgency issues.</li>
+                </ul>
+            </p>
+            <p class="highlights">Highlights: Champion of the Masses, Focus on Social Justice and Economic Development</p>
+        </div>
+        <div class="president-card">
+            <img src="pres8.jpg" alt="Carlos P. Garcia">
+            <h2>Carlos P. Garcia</h2>
+            <p><strong>Background:</strong> Carlos P. Garcia was born on November 4, 1896, in Talibon, Bohol. He was a lawyer and politician who served in various capacities before becoming president.</p>
+            <p><strong>Biography:</strong> Garcia served as the eighth President of the Philippines from 1957 to 1961. He was known for his "Filipino First Policy," which aimed to prioritize Filipino businesses and interests.</p>
+            <p><strong>Contributions:</strong>
+                <ul>
+                    <li>Filipino First Policy: Promoted Filipino businesses and aimed for self-sufficiency.</li>
+                    <li>Foreign Relations: Strengthened ties with Asian nations and non-aligned countries.</li>
+                    <li>Cultural Preservation: Advocated for the promotion of Filipino culture and heritage.</li>
+                </ul>
+            </p>
+            <p class="highlights">Highlights: Advocate for Filipino Interests, Focus on Cultural Preservation</p>
+        </div>
+    </div>
+    <footer>
+        &copy; Group 5 Web System 101
+    </footer>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const day = days[now.getDay()];
+            const date = now.getDate().toString().padStart(2, '0');
+            const month = (now.getMonth() + 1).toString().padStart(2, '0');
+            const year = now.getFullYear();
+            let hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; 
+
+            document.getElementById('clock-day').innerHTML = day;
+            document.getElementById('clock-date').innerHTML = `${month}/${date}/${year}`;
+            document.getElementById('clock-time').innerHTML = `${hours}:${minutes}:${seconds} ${ampm}`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
